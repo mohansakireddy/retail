@@ -43,11 +43,6 @@ public class RewardServiceImpl implements RewardService {
             totalRewardPoints = totalRewardPoints + rewardPointsPerTransaction;
 
              }
-//        monthlyRewardPoints = monthlyRewardPoints.entrySet()
-//                .stream()
-//                .sorted(Map.Entry.<String, Integer>comparingByKey().reversed())
-//                .collect(Collectors.toMap(Map.Entry::getKey , Map.Entry::getValue,
-//                        (e1, e2) -> e1, LinkedHashMap::new));
 
         Map<String, Object> response = new LinkedHashMap<>();
         response.put("Customer", customer.getName());
