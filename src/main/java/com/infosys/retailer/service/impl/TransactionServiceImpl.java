@@ -24,7 +24,7 @@ public class TransactionServiceImpl implements TransactionService {
         Transaction transaction = new Transaction();
         transaction.setAmount(transactionDto.getAmount());
         transaction.setTransactionDate(transactionDto.getTransactionDate());
-
+        transaction.setCustomer(customer);
         return transactionRepository.save(transaction);
     }
 }

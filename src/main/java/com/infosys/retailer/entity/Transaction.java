@@ -15,7 +15,9 @@ public class Transaction {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private  Long id;
-    private Long customerId;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "customer_id" , nullable = false)
+    private Customer customer;
     private LocalDate transactionDate;
     private double amount;
 

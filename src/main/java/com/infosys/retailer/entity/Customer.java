@@ -20,6 +20,9 @@ public class Customer {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
+    @OneToMany(mappedBy = "customer" , cascade = CascadeType.ALL)
+    @JsonIgnore
+    private List<Transaction> transactions;
 
 
 }
