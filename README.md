@@ -14,14 +14,18 @@
     <li><strong>Description:</strong> It will provide cutomer reward points for the last three months transactions.</li>
     <li><strong>HTTP Method:</strong> GET </li>
     <li><strong>Access URL :</strong> http://localhost:8080/retailer/rewards/{customerId}</li>
-
+    </ul>
+    
 2) createCustomer:
+   <ul>
    <li><strong>Description:</strong>It will create new customers.</li>
    <li><strong>HTTP Method:</strong> POST</li>
    <li><strong>Access the API :</strong> http://localhost:8080/retailer/customer</li>
-
-3) createTransaction:
+   </ul>
+   
+4) createTransaction:
+   <ul>
    <li><strong>Description:</strong>It will create new Transactions.</li>
    <li><strong>HTTP Method:</strong> POST</li>
    <li><strong>Access the API:</strong>  http://localhost:8080/retailer/transaction</li>
-
+   </ul>
