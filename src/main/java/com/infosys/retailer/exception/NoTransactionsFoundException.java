@@ -1,9 +1,9 @@
 package com.infosys.retailer.exception;
 
-public class NoTransactionsFoundException  extends RuntimeException{
+public class NoTransactionsFoundException extends RuntimeException {
 
-    public NoTransactionsFoundException(Long cutomerId){
-        super("No Transactions found for the Customer with CustomerID "+cutomerId+ "in last three months");
+    public NoTransactionsFoundException(Long customerId) {
+        super("No Transactions found for the Customer with CustomerID " + customerId + "in last three months");
     }
 
 }

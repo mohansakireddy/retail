@@ -17,9 +17,10 @@ public class RewardController {
 
     @Autowired
     private RewardService rewardService;
+
     @GetMapping(Constants.CUSTOMER_ID)
-    public ResponseEntity<Map<String, Object>> getCustomerRewards(@PathVariable("customerId") Long customerId){
-        Map<String,Object> rewards = rewardService.getCustomerRewards(customerId);
+    public ResponseEntity<Map<String, Object>> getCustomerRewards(@PathVariable("customerId") Long customerId) {
+        Map<String, Object> rewards = rewardService.getCustomerRewards(customerId);
         return ResponseEntity.ok(rewards);
     }
 

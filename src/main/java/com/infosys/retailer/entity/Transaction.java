@@ -14,9 +14,9 @@ import java.time.LocalDate;
 public class Transaction {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private  Long id;
+    private Long id;
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "customer_id" , nullable = false)
+    @JoinColumn(name = "customer_id", nullable = false)
     private Customer customer;
     private LocalDate transactionDate;
     private double amount;

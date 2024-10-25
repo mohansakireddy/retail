@@ -3,6 +3,7 @@ package com.infosys.retailer.dto;
 import lombok.Data;
 
 import java.time.LocalDate;
+
 @Data
 public class TransactionDto {
 

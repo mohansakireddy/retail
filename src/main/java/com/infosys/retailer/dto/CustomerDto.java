@@ -8,5 +8,4 @@ public class CustomerDto {
     private String name;
 
 
-
 }

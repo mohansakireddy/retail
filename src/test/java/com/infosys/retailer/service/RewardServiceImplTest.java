@@ -31,35 +31,35 @@ public class RewardServiceImplTest {
     @Mock
     private TransactionRepository transactionRepository;
     private Customer customer;
+
     @BeforeEach
-    void setup(){
+    void setup() {
         MockitoAnnotations.openMocks(this);
-         customer = new Customer();
+        customer = new Customer();
         customer.setId(1L);
         customer.setName("mohan");
-
 
 
     }
 
     @Test
-    void testGetCustomerRewards_Success(){
+    void testGetCustomerRewards_Success() {
 
-    List<Transaction> transactions = Arrays.asList(
-            new Transaction(1L,customer, LocalDate.now().minusMonths(0),175),
-            new Transaction(2L,customer,  LocalDate.now().minusMonths(1),75 ),
-            new Transaction(3L,customer,  LocalDate.now().minusMonths(2),5 )
-    );
-       customer.setTransactions(transactions);
+        List<Transaction> transactions = Arrays.asList(
+                new Transaction(1L, customer, LocalDate.now().minusMonths(0), 175),
+                new Transaction(2L, customer, LocalDate.now().minusMonths(1), 75),
+                new Transaction(3L, customer, LocalDate.now().minusMonths(2), 5)
+        );
+        customer.setTransactions(transactions);
 
         when(customerRepository.findById(1L)).thenReturn(Optional.of(customer));
         when(transactionRepository.findTransactionsForLastThreeMonths(1L, LocalDate.now().minusMonths(3))).thenReturn(transactions);
 
-        Map<String , Object> response = rewardService.getCustomerRewards(customer.getId());
+        Map<String, Object> response = rewardService.getCustomerRewards(customer.getId());
 
         assertEquals("mohan", response.get("Customer"));
 
-        Map<String , Object> rewardsPerMonth = (Map<String, Object>) response.get("Rewards Per Month");
+        Map<String, Object> rewardsPerMonth = (Map<String, Object>) response.get("Rewards Per Month");
         assertEquals(200, rewardsPerMonth.get(LocalDate.now().minusMonths(0).getMonth().toString()));
         assertEquals(25, rewardsPerMonth.get(LocalDate.now().minusMonths(1).getMonth().toString()));
         assertEquals(0, rewardsPerMonth.get(LocalDate.now().minusMonths(2).getMonth().toString()));
@@ -70,23 +70,23 @@ public class RewardServiceImplTest {
 //        assertEquals(25, rewardsPerMonth.get("SEPTEMBER"));
 //        assertEquals(200, rewardsPerMonth.get("OCTOBER"));
 
-}
+    }
 
-@Test
-void  testGetCustomerRewards_CustomerNotFound(){
+    @Test
+    void testGetCustomerRewards_CustomerNotFound() {
         when(customerRepository.findById(customer.getId())).thenReturn(Optional.empty());
         assertThrows(CustomerNotFoundException.class, () -> rewardService.getCustomerRewards(customer.getId()));
-}
+    }
 
-@Test
-   void testGetCustomerRewards_NoTransactionsFound(){
-       Customer customer = new Customer(1L, "mohan", null);
+    @Test
+    void testGetCustomerRewards_NoTransactionsFound() {
+        Customer customer = new Customer(1L, "mohan", null);
         when(customerRepository.findById(customer.getId())).thenReturn(Optional.of(customer));
-        when(transactionRepository.findTransactionsForLastThreeMonths(eq(customer.getId()),any(LocalDate.class))).thenReturn(Collections.emptyList());
+        when(transactionRepository.findTransactionsForLastThreeMonths(eq(customer.getId()), any(LocalDate.class))).thenReturn(Collections.emptyList());
 
-        assertThrows(NoTransactionsFoundException.class, () ->rewardService.getCustomerRewards(customer.getId()));
+        assertThrows(NoTransactionsFoundException.class, () -> rewardService.getCustomerRewards(customer.getId()));
 
-   }
+    }
 
 
 }
