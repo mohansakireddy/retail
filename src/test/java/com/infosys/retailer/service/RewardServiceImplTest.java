@@ -53,7 +53,7 @@ public class RewardServiceImplTest {
         customer.setTransactions(transactions);
 
         when(customerRepository.findById(1L)).thenReturn(Optional.of(customer));
-        when(transactionRepository.findTransactionsForLastThreeMonths(1L, LocalDate.now().minusMonths(3))).thenReturn(transactions);
+        when(transactionRepository.findCustomerTransactionsForLastThreeMonths(1L, LocalDate.now().minusMonths(3))).thenReturn(transactions);
 
         Map<String, Object> response = rewardService.getCustomerRewards(customer.getId());
 
@@ -82,7 +82,7 @@ public class RewardServiceImplTest {
     void testGetCustomerRewards_NoTransactionsFound() {
         Customer customer = new Customer(1L, "mohan", null);
         when(customerRepository.findById(customer.getId())).thenReturn(Optional.of(customer));
-        when(transactionRepository.findTransactionsForLastThreeMonths(eq(customer.getId()), any(LocalDate.class))).thenReturn(Collections.emptyList());
+        when(transactionRepository.findCustomerTransactionsForLastThreeMonths(eq(customer.getId()), any(LocalDate.class))).thenReturn(Collections.emptyList());
 
         assertThrows(NoTransactionsFoundException.class, () -> rewardService.getCustomerRewards(customer.getId()));
 

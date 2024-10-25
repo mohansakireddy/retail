@@ -13,7 +13,13 @@ public class GlobalExceptionHandler {
         return new ResponseEntity<>(ex.getMessage(), HttpStatus.NOT_FOUND);
     }
 
+    @ExceptionHandler(NoTransactionsFoundException.class)
     public ResponseEntity<String> handleNoTransactionsFound(NoTransactionsFoundException ex) {
+        return new ResponseEntity<>(ex.getMessage(), HttpStatus.NOT_FOUND);
+    }
+
+    @ExceptionHandler(NoTransactionsFoundForCustomerException.class)
+    public ResponseEntity<String> handleNoTransactionsFoundForCustomer(NoTransactionsFoundForCustomerException ex) {
         return new ResponseEntity<>(ex.getMessage(), HttpStatus.NOT_FOUND);
     }
 

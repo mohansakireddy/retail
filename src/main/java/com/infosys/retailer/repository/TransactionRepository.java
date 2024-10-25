@@ -12,8 +12,11 @@ import java.util.List;
 @Repository
 public interface TransactionRepository extends JpaRepository<Transaction, Long> {
 
+    @Query("SELECT t FROM Transaction t WHERE t.transactionDate >= :startDate")
+    List<Transaction> findTransactionsForLastThreeMonths(@Param("startDate") LocalDate startDate);
+
     List<Transaction> findByCustomerId(Long customerId);
 
     @Query("SELECT t FROM Transaction t WHERE t.customer.id = :customerId AND t.transactionDate >= :threeMonthsAgo")
-    List<Transaction> findTransactionsForLastThreeMonths(@Param("customerId") Long customerId, @Param("threeMonthsAgo") LocalDate threeMonthsAgo);
+    List<Transaction> findCustomerTransactionsForLastThreeMonths(@Param("customerId") Long customerId, @Param("threeMonthsAgo") LocalDate threeMonthsAgo);
 }

@@ -7,9 +7,11 @@ public class Constants {
     public static final String TRANSACTION = BASE_API + "/transaction";
     public static final String REWARDS = BASE_API + "/rewards";
     public static final String CUSTOMER_ID = "/{customerId}";
+    public static final String RESPONSE_CUSTOMER_ID = "Customer ID";
     public static final String RESPONSE_CUSTOMER_NAME = "Customer";
     public static final String RESPONSE_REWARDS_PER_MONTH = "Rewards Per Month";
     public static final String RESPONSE_TOTAL_REWARDS = "Total Rewards";
+    public static final String RESPONSE_REWARDS = "Rewards";
 
 
 }
