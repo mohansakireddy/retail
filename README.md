@@ -9,7 +9,7 @@
 
 <h2>API Endpoins:</h2>
 
-    <h3>1) getCustomerRewards:</h3>
+    1) getCustomerRewards:
     <ul>
     <li><strong>Description:</strong> It will provide cutomer reward points for the last three months transactions.</li>
     <li><strong>HTTP Method:</strong> GET </li>
