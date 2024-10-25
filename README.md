@@ -9,23 +9,25 @@
 
 <h2>API Endpoins:</h2>
 
-    1) getCustomerRewards:
-    <ul>
-    <li><strong>Description:</strong> It will provide cutomer reward points for the last three months transactions.</li>
-    <li><strong>HTTP Method:</strong> GET </li>
-    <li><strong>Access URL :</strong> http://localhost:8080/retailer/rewards/{customerId}</li>
-    </ul>
-    
+   
+
+1)  getCustomerRewards:
+   <ul>
+   <li><strong>Description:</strong> It will provide cutomer reward points for the last three months transactions.</li>
+   <li><strong>HTTP Method:</strong> GET </li>
+   <li><strong>Access the API :</strong><code>http://localhost:8080/retailer/rewards/{customerId} </code></li>
+   </ul>   
+   
 2) createCustomer:
    <ul>
    <li><strong>Description:</strong>It will create new customers.</li>
    <li><strong>HTTP Method:</strong> POST</li>
-   <li><strong>Access the API :</strong> http://localhost:8080/retailer/customer</li>
+   <li><strong>Access the API :</strong><code> http://localhost:8080/retailer/customer</code></li>
    </ul>
    
-4) createTransaction:
+3) createTransaction:
    <ul>
    <li><strong>Description:</strong>It will create new Transactions.</li>
    <li><strong>HTTP Method:</strong> POST</li>
-   <li><strong>Access the API:</strong>  http://localhost:8080/retailer/transaction</li>
+   <li><strong>Access the API:</strong> <code> http://localhost:8080/retailer/transaction</code></li>
    </ul>
