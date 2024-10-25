@@ -1,9 +1,9 @@
 <h1 align="center">Retailer</h1>
-This project is a RESTful Web API built using spring boot. 
-This Retailer application calculates reward points for customers based on their transaction amounts during the last three months.
-Reward points are earned as follows
-i) A cutomer receives 2 points for every dollar sprnt over $100 in each transaction and
-ii) A cusotmer receives 1 point for every dollar spent between $50 and $100 in each transaction.
+<p>This project is a RESTful Web API built using spring boot. </p>
+<p>This Retailer application calculates reward points for customers based on their transaction amounts during the last three months.</p>
+<p>Reward points are earned as follows <br>
+i) A cutomer receives 2 points for every dollar sprnt over $100 in each transaction and <br>
+ii) A cusotmer receives 1 point for every dollar spent between $50 and $100 in each transaction.</p>
 
 API's Endpoins:
 1) getCustomerRewards:
