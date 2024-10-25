@@ -1,3 +1,4 @@
+<h1 align="center">Retailer</h1>
 This project is a RESTful Web API built using spring boot. 
 This Retailer application calculates reward points for customers based on their transaction amounts during the last three months.
 Reward points are earned as follows
