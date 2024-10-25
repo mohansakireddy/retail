@@ -7,6 +7,7 @@ import com.infosys.retailer.exception.NoTransactionsFoundException;
 import com.infosys.retailer.repository.CustomerRepository;
 import com.infosys.retailer.repository.TransactionRepository;
 import com.infosys.retailer.service.RewardService;
+import com.infosys.retailer.variables.Constants;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -45,9 +46,9 @@ public class RewardServiceImpl implements RewardService {
              }
 
         Map<String, Object> response = new LinkedHashMap<>();
-        response.put("Customer", customer.getName());
-        response.put("Rewards Per Month",monthlyRewardPoints);
-        response.put(("Total Rewards"), totalRewardPoints);
+        response.put(Constants.RESPONSE_CUSTOMER_NAME, customer.getName());
+        response.put(Constants.RESPONSE_REWARDS_PER_MONTH,monthlyRewardPoints);
+        response.put(Constants.RESPONSE_TOTAL_REWARDS, totalRewardPoints);
         return response;
     }
 

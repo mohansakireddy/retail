@@ -3,6 +3,7 @@ package com.infosys.retailer.service.impl;
 import com.infosys.retailer.dto.TransactionDto;
 import com.infosys.retailer.entity.Customer;
 import com.infosys.retailer.entity.Transaction;
+import com.infosys.retailer.exception.CustomerNotFoundException;
 import com.infosys.retailer.repository.CustomerRepository;
 import com.infosys.retailer.repository.TransactionRepository;
 import com.infosys.retailer.service.TransactionService;
@@ -19,7 +20,7 @@ public class TransactionServiceImpl implements TransactionService {
     @Override
     public Transaction createTransaction(TransactionDto transactionDto) {
         Customer customer = customerRepository.findById(transactionDto.getCustomerId())
-                .orElseThrow(() -> new RuntimeException("Customer not found"));
+                .orElseThrow(() -> new CustomerNotFoundException(transactionDto.getCustomerId()));
 
         Transaction transaction = new Transaction();
         transaction.setAmount(transactionDto.getAmount());

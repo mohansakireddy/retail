@@ -3,6 +3,7 @@ package com.infosys.retailer.controller;
 import com.infosys.retailer.dto.TransactionDto;
 import com.infosys.retailer.entity.Transaction;
 import com.infosys.retailer.service.TransactionService;
+import com.infosys.retailer.variables.Constants;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -11,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/retailer/transaction")
+@RequestMapping(Constants.TRANSACTION)
 public class TransactionController {
 
     @Autowired
