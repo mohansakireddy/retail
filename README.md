@@ -39,9 +39,9 @@
    </ul>
 
 <h2>Accessing H2 console</h2>
- <ul>
-   <li><strong>H2 console url:</strong> <code>http://localhost:8080/h2-console</li>
+   <ul>
+   <li><strong>H2 console url:</strong> <code>http://localhost:8080/h2-console</code></li>
    <li><strong>JDBC URL:</strong> <code>jdbc:h2:mem:testdb</code></li>
-    <li><strong>username:</strong> <code>sa</code> </li>
-    <li><strong>password:</strong> (leave blank) </li>
+   <li><strong>username:</strong> <code>sa</code> </li>
+   <li><strong>password:</strong> (leave blank) </li>
    </ul> 
