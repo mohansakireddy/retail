@@ -58,13 +58,18 @@ public class RewardServiceImpl implements RewardService {
 
 
         }
-//        List<Map<String, Object>> orderedRewardsList = new ArrayList<>();
-//        for (Map.Entry<Long, Map<String, Object>> entry : rewardsPerCustomer.entrySet()) {
-//            Map<String, Object> customerInfo = entry.getValue();
-//            orderedRewardsList.add(customerInfo);
-//        }
+         //to keep the order in output
+        List<Map<String, Object>> orderedResponse = new ArrayList<>();
+        for (Map<String, Object> customerData : rewardsPerCustomer.values()) {
+            Map<String, Object> orderedCustomerData = new LinkedHashMap<>();
+            orderedCustomerData.put(Constants.RESPONSE_CUSTOMER_ID, customerData.get(Constants.RESPONSE_CUSTOMER_ID));
+            orderedCustomerData.put(Constants.RESPONSE_CUSTOMER_NAME, customerData.get(Constants.RESPONSE_CUSTOMER_NAME));
+            orderedCustomerData.put(Constants.RESPONSE_REWARDS_PER_MONTH, customerData.get(Constants.RESPONSE_REWARDS_PER_MONTH));
+            orderedCustomerData.put(Constants.RESPONSE_TOTAL_REWARDS, customerData.get(Constants.RESPONSE_TOTAL_REWARDS));
 
-        return new ArrayList<>(rewardsPerCustomer.values());
+            orderedResponse.add(orderedCustomerData);
+        }
+        return orderedResponse;
 
     }
 
