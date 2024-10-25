@@ -7,6 +7,12 @@
 <li> A cusotmer receives 1 point for every dollar spent between $50 and $100 in each transaction.</li>
 </ul>
 
+<h2>Features</h2>
+<ul>
+   <li>Calculates monthly and total reward points for each customer based on their transactions for last three months.</li>
+   <li>provides REST endpoints to fetch customer rewards.</li>
+   <li>Uses H2 in-memory database for test data, initialized via data.sql.</li>
+</ul>
 <h2>API Endpoins:</h2>
 
    
@@ -31,3 +37,11 @@
    <li><strong>HTTP Method:</strong> POST</li>
    <li><strong>Access the API:</strong> <code> http://localhost:8080/retailer/transaction</code></li>
    </ul>
+
+<h2>Accessing H2 console</h2>
+ <ul>
+   <li><strong>H2 console url:</strong> <code>http://localhost:8080/h2-console</li>
+   <li><strong>JDBC URL:</strong> <code>jdbc:h2:mem:testdb</code></li>
+    <li><strong>username:</strong> <code>sa</code> </li>
+    <li><strong>password:</strong> (leave blank) </li>
+   </ul> 
