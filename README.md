@@ -17,21 +17,21 @@
 
    
 
-1)  getCustomerRewards:
+<h3>1)  getCustomerRewards:</h3>
    <ul>
    <li><strong>Description:</strong> It will provide cutomer reward points for the last three months transactions.</li>
    <li><strong>HTTP Method:</strong> GET </li>
    <li><strong>Access the API :</strong><code>http://localhost:8080/retailer/rewards/{customerId} </code></li>
    </ul>   
    
-2) createCustomer:
+<h3>2) createCustomer:</h3>
    <ul>
    <li><strong>Description:</strong>It will create new customers.</li>
    <li><strong>HTTP Method:</strong> POST</li>
    <li><strong>Access the API :</strong><code> http://localhost:8080/retailer/customer</code></li>
    </ul>
    
-3) createTransaction:
+<h3>3) createTransaction:</h3>
    <ul>
    <li><strong>Description:</strong>It will create new Transactions.</li>
    <li><strong>HTTP Method:</strong> POST</li>
