@@ -11,12 +11,12 @@ This Retailer application calculates reward points for customers based on their 
 ## Table of Contents
 
 - [Features](#features)
-- [Installation Guides](#installation-guide)
-- [List of Software Used](#software-used)
-- [Project Structure](#project-structure)
 - [API Endpoints](#api-endpoints)
 - [Accessing H2 Console](#accessing-h2-console)
+- [Project Structure](#project-structure)
+- [Installation Guides](#installation-guide)
 - [Flow Diagram](#flow-diagram)
+- [List of Software Used](#software-used)
 
 
 ## Features
@@ -24,108 +24,6 @@ This Retailer application calculates reward points for customers based on their 
 - provides REST endpoints to fetch rewards.
 - Uses H2 in-memory database for test data, initialized via data.sql.
 
-## Installation Guide
-
-### 1. Clone the Repository
-```
-git clone https://github.com/mohansakireddy/retail
-
-```
-
-### 2. Navigate to the project Repository
-```
-cd retail
-```
-
-### 3. Build the project
-
-```
-mvn clean install
-
-```
-
-### 4. Run the Application
-
-```
-mvn spring-boot:run
-```
-
-### 5.Access H2 console
-
-'http://localhost:8080/h2-console'
-
-## Software Used
-- **JAVA** 
-- **Spring Boot**
-- **H2 Database:** In-Memory database for Testing 
-- **Maven:** Build Automation Tool
-
-## Project Structure
-
-```plaintext
-src
-├───main
-│   ├───java
-│   │   └───com
-│   │       └───infosys
-│   │           └───retailer
-│   │               │   RetailerApplication.java
-│   │               │
-│   │               ├───controller
-│   │               │       CustomerController.java
-│   │               │       RewardController.java
-│   │               │       TransactionController.java
-│   │               │
-│   │               ├───dto
-│   │               │       CustomerDto.java
-│   │               │       TransactionDto.java
-│   │               │
-│   │               ├───entity
-│   │               │       Customer.java
-│   │               │       Transaction.java
-│   │               │
-│   │               ├───exception
-│   │               │       CustomerNotFoundException.java
-│   │               │       GlobalExceptionHandler.java
-│   │               │       NoTransactionsFoundException.java
-│   │               │       NoTransactionsFoundForCustomerException.java
-│   │               │
-│   │               ├───repository
-│   │               │       CustomerRepository.java
-│   │               │       TransactionRepository.java
-│   │               │
-│   │               ├───service
-│   │               │   │   CustomerService.java
-│   │               │   │   RewardService.java
-│   │               │   │   TransactionService.java
-│   │               │   │
-│   │               │   └───impl
-│   │               │           CustomerServiceImpl.java
-│   │               │           RewardServiceImpl.java
-│   │               │           TransactionServiceImpl.java
-│   │               │
-│   │               └───variables
-│   │                       Constants.java
-│   │
-│   └───resources
-│       │   application.properties
-│       │   data.sql
-│       │
-│       ├───static
-│       └───templates
-└───test
-    └───java
-        └───com
-            └───infosys
-                └───retailer
-                    │   RetailerApplicationTests.java
-                    │
-                    ├───Controller
-                    │       RewardControllerTest.java
-                    │
-                    └───service
-                            RewardServiceImplTest.java
-```
 
 ## API Endpoints
 
@@ -248,4 +146,106 @@ src
 - **password:** (leave blank)
 
 
+## Project Structure
 
+```plaintext
+src
+├───main
+│   ├───java
+│   │   └───com
+│   │       └───infosys
+│   │           └───retailer
+│   │               │   RetailerApplication.java
+│   │               │
+│   │               ├───controller
+│   │               │       CustomerController.java
+│   │               │       RewardController.java
+│   │               │       TransactionController.java
+│   │               │
+│   │               ├───dto
+│   │               │       CustomerDto.java
+│   │               │       TransactionDto.java
+│   │               │
+│   │               ├───entity
+│   │               │       Customer.java
+│   │               │       Transaction.java
+│   │               │
+│   │               ├───exception
+│   │               │       CustomerNotFoundException.java
+│   │               │       GlobalExceptionHandler.java
+│   │               │       NoTransactionsFoundException.java
+│   │               │       NoTransactionsFoundForCustomerException.java
+│   │               │
+│   │               ├───repository
+│   │               │       CustomerRepository.java
+│   │               │       TransactionRepository.java
+│   │               │
+│   │               ├───service
+│   │               │   │   CustomerService.java
+│   │               │   │   RewardService.java
+│   │               │   │   TransactionService.java
+│   │               │   │
+│   │               │   └───impl
+│   │               │           CustomerServiceImpl.java
+│   │               │           RewardServiceImpl.java
+│   │               │           TransactionServiceImpl.java
+│   │               │
+│   │               └───variables
+│   │                       Constants.java
+│   │
+│   └───resources
+│       │   application.properties
+│       │   data.sql
+│       │
+│       ├───static
+│       └───templates
+└───test
+    └───java
+        └───com
+            └───infosys
+                └───retailer
+                    │   RetailerApplicationTests.java
+                    │
+                    ├───Controller
+                    │       RewardControllerTest.java
+                    │
+                    └───service
+                            RewardServiceImplTest.java
+```
+
+## Installation Guide
+
+### 1. Clone the Repository
+```
+git clone https://github.com/mohansakireddy/retail
+
+```
+
+### 2. Navigate to the project Repository
+```
+cd retail
+```
+
+### 3. Build the project
+
+```
+mvn clean install
+
+```
+
+### 4. Run the Application
+
+```
+mvn spring-boot:run
+```
+
+### 5.Access H2 console
+
+'http://localhost:8080/h2-console'
+
+
+## Software Used
+- **JAVA** 
+- **Spring Boot**
+- **H2 Database:** In-Memory database for Testing 
+- **Maven:** Build Automation Tool
