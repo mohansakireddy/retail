@@ -58,7 +58,7 @@ public class RewardServiceImpl implements RewardService {
 
 
         }
-         //to keep the order in output
+        //to keep the order in output
         List<Map<String, Object>> orderedResponse = new ArrayList<>();
         for (Map<String, Object> customerData : rewardsPerCustomer.values()) {
             Map<String, Object> orderedCustomerData = new LinkedHashMap<>();
