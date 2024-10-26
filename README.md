@@ -8,10 +8,63 @@ This Retailer application calculates reward points for customers based on their 
 - A cutomer receives 2 points for every dollar sprnt over $100 in each transaction plus
 - A cusotmer receives 1 point for every dollar spent between $50 and $100 in each transaction.
 
+## Table of Contents
+
+- [Features](#features)
+- [Installation Guides](#installation-guides)
+- [List of Software Used](#software-used)
+- [Project Structure](#project-structure)
+- [API Endpoints](#api-endpoints)
+  - [Get Rewards for transactions of three months](#get-rewards-for-transactions-of-three-months) 
+  - [Get Customer Rewards](#get-customer-rewards)
+  - [Create Customer](#create-customer)
+  - [Create Transaction](#create-transaction)
+- [Accessing H2 Console](#accessing-h2-console)
+
+
+- [Flow Diagram](#flow-diagram)
+- [List of Software Used](#list-of-software-used)
+
 ## Features
 - Calculates rewards points for transactions of last three months for each and every customer.
 - provides REST endpoints to fetch rewards.
 - Uses H2 in-memory database for test data, initialized via data.sql.
+
+## Installation Guide
+
+### 1. Clone the Repository
+```
+git clone https://github.com/mohansakireddy/retail
+
+```
+
+### 2. Navigate to the project Repository
+```
+cd retail
+```
+
+### 3. Build the project
+
+```
+mvn clean install
+
+```
+
+### 4. Run the Application
+
+```
+mvn spring-boot:run
+```
+
+### 5.Access H2 console
+
+'http://localhost:8080/h2-console'
+
+## Software Used
+- **JAVA** 
+- **Spring Boot**
+- **H2 Database:** In-Memory database for Testing 
+- **Maven:** Build Automation Tool
 
 ## Project Structure
 
@@ -200,38 +253,5 @@ src
 - **username:** `sa`
 - **password:** (leave blank)
 
-## Software Used
-- **JAVA** 
-- **Spring Boot**
-- **H2 Database:** In-Memory database for Testing 
-- **Maven:** Build Automation Tool
 
-## Installation Guide
 
-### 1. Clone the Repository
-```
-git clone https://github.com/mohansakireddy/retail
-
-```
-
-### 2. Navigate to the project Repository
-```
-cd retail
-```
-
-### 3. Build the project
-
-```
-mvn clean install
-
-```
-
-### 4. Run the Application
-
-```
-mvn spring-boot:run
-```
-
-### 5.Access H2 console
-
-'http://localhost:8080/h2-console'
