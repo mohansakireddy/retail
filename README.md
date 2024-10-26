@@ -194,3 +194,14 @@ src
     "amount": 555.0
 }
 ```
+## Accessing H2 console
+- **H2 Console url:** `POST`
+- **JDBC URL:** `jdbc:h2:mem:testdb`
+- **username:** `sa`
+- **password:** (leave blank)
+
+## Software Used
+- **JAVA** 
+- **Spring Boot**
+- **H2 Database:** In-Memory database for Testing 
+- **Maven:** Build Automation Tool
