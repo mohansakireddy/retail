@@ -195,7 +195,7 @@ src
 }
 ```
 ## Accessing H2 console
-- **H2 Console url:** `POST`
+- **H2 Console url:** `[POST](http://localhost:8080/h2-console)`
 - **JDBC URL:** `jdbc:h2:mem:testdb`
 - **username:** `sa`
 - **password:** (leave blank)
@@ -205,3 +205,33 @@ src
 - **Spring Boot**
 - **H2 Database:** In-Memory database for Testing 
 - **Maven:** Build Automation Tool
+
+## Installation Guide
+
+### 1. Clone the Repository
+```
+git clone https://github.com/mohansakireddy/retail
+
+```
+
+### 2. Navigate to the project Repository
+```
+cd retail
+```
+
+### 3. Build the project
+
+```
+mvn clean install
+
+```
+
+### 4. Run the Application
+
+```
+mvn spring-boot:run
+```
+
+### 5.Access H2 console
+
+'http://localhost:8080/h2-console'
