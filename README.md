@@ -19,6 +19,35 @@ This Retailer application calculates reward points for customers based on their 
 - **Description**: Provides reward points for the last three months of transactions of each and every customer.
 - **HTTP Method**: `GET`
 - **URL**: `http://localhost:8080/retailer/rewards`
+- 
+#### Request
+
+- **No Parameters**.
+
+#### Response Example
+
+```json
+[
+    {
+        "Customer ID": 1,
+        "Customer": "mohan",
+        "Rewards Per Month": {
+            "OCTOBER": 200,
+            "SEPTEMBER": 25,
+            "AUGUST": 0
+        },
+        "Total Rewards": 225
+    },
+    {
+        "Customer ID": 2,
+        "Customer": "siva",
+        "Rewards Per Month": {
+            "OCTOBER": 200,
+            "SEPTEMBER": 25
+        },
+        "Total Rewards": 225
+    }
+]
 
 ### 2) Get Customer Rewards
 
