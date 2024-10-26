@@ -17,7 +17,7 @@ This Retailer application calculates reward points for customers based on their 
 - [Installation Guides](#installation-guide)
 - [Flow Diagram](images/flowdiagram.png)
 - [List of Software Used](#software-used)
-- [API Testing Screenshots](api-testing-docs/getrewardsforrecenttransactions.png)
+- [API Testing Screenshots](api testing docs/getrewardsforrecenttransactions.png)
 
 
 ## Features
