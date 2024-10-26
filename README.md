@@ -15,7 +15,7 @@ This Retailer application calculates reward points for customers based on their 
 
 ## API Endpoints
 
-### 1) Get Rewards for transactions of three months
+### 1. Get Rewards for transactions of three months
 - **Description**: Provides reward points for the last three months of transactions of each and every customer.
 - **HTTP Method**: `GET`
 - **URL**: `http://localhost:8080/retailer/rewards`
@@ -48,3 +48,82 @@ This Retailer application calculates reward points for customers based on their 
         "Total Rewards": 225
     }
 ]
+```
+### 2. Get Customer Rewards
+
+- **Description**: Provides customer reward points for the last three months of transactions.
+- **HTTP Method**: `GET`
+- **URL**: `http://localhost:8080/retailer/rewards/{customerId}`
+  
+#### Request
+
+- **Path Parameter**:
+  - `customerId`: ID of the customer.
+
+#### Response Example
+
+```json
+{
+    "Customer": "mohan",
+    "Rewards Per Month": {
+        "OCTOBER": 200,
+        "SEPTEMBER": 25,
+        "AUGUST": 0
+    },
+    "Total Rewards": 225
+}
+```
+### 2. create Customer
+
+- **Description**: It will create new customers.
+- **HTTP Method**: `POST`
+- **URL**: ` http://localhost:8080/retailer/customer`
+  
+#### Request
+
+- **Request Body**:
+```json
+{
+    "name" : "mahesh"
+}
+```
+
+#### Response Example
+
+```json
+{
+    "id": 3,
+    "name": "mahesh"
+}
+```
+
+### 2. create Transaction
+
+- **Description**: It will create new Transactions.
+- **HTTP Method**: `POST`
+- **URL**: ` http://localhost:8080/retailer/transaction`
+  
+#### Request
+
+- **Request Body**:
+```json
+{
+    "customerId" : "3",
+    "amount" : "555.00",
+    "transactionDate" : "2024-10-22"
+}
+```
+
+#### Response Example
+
+```json
+{
+    "id": 7,
+    "customer": {
+        "id": 3,
+        "name": "mahesh"
+    },
+    "transactionDate": "2024-10-22",
+    "amount": 555.0
+}
+```
