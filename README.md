@@ -13,6 +13,39 @@ This Retailer application calculates reward points for customers based on their 
 - provides REST endpoints to fetch rewards.
 - Uses H2 in-memory database for test data, initialized via data.sql.
 
+```plaintext
+
+src
+├── main
+│   ├── java
+│   │   └── com
+│   │       └── infosys
+│   │           └── retailer
+│   │               ├── controller
+│   │               │   ├── CustomerController.java
+│   │               │   └── TransactionController.java
+│   │               ├── entity
+│   │               │   ├── Customer.java
+│   │               │   └── Transaction.java
+│   │               ├── repository
+│   │               │   ├── CustomerRepository.java
+│   │               │   └── TransactionRepository.java
+│   │               ├── service
+|   |               |   ||
+│   │               │   ├── RewardService.java
+│   │               │   └── RewardServiceImpl.java
+│   │               └── exception
+│   │                   └── CustomExceptions.java
+├── test
+│   └── java
+│       └── com
+│           └── infosys
+│               └── retailer
+│                   └── RewardServiceImplTest.java
+└── resources
+    └── application.properties
+```
+
 ## API Endpoints
 
 ### 1. Get Rewards for transactions of three months
