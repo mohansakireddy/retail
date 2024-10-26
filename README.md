@@ -15,7 +15,7 @@ This Retailer application calculates reward points for customers based on their 
 - [Accessing H2 Console](#accessing-h2-console)
 - [Project Structure](#project-structure)
 - [Installation Guides](#installation-guide)
-- [Flow Diagram](retail/images/flowdiagram.png)
+- [Flow Diagram](images/flowdiagram.png)
 - [List of Software Used](#software-used)
 
 
