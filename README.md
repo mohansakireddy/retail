@@ -13,37 +13,71 @@ This Retailer application calculates reward points for customers based on their 
 - provides REST endpoints to fetch rewards.
 - Uses H2 in-memory database for test data, initialized via data.sql.
 
-```plaintext
+## Project Structure
 
+```plaintext
 src
-├── main
-│   ├── java
-│   │   └── com
-│   │       └── infosys
-│   │           └── retailer
-│   │               ├── controller
-│   │               │   ├── CustomerController.java
-│   │               │   └── TransactionController.java
-│   │               ├── entity
-│   │               │   ├── Customer.java
-│   │               │   └── Transaction.java
-│   │               ├── repository
-│   │               │   ├── CustomerRepository.java
-│   │               │   └── TransactionRepository.java
-│   │               ├── service
-|   |               |   ||
-│   │               │   ├── RewardService.java
-│   │               │   └── RewardServiceImpl.java
-│   │               └── exception
-│   │                   └── CustomExceptions.java
-├── test
-│   └── java
-│       └── com
-│           └── infosys
-│               └── retailer
-│                   └── RewardServiceImplTest.java
-└── resources
-    └── application.properties
+├───main
+│   ├───java
+│   │   └───com
+│   │       └───infosys
+│   │           └───retailer
+│   │               │   RetailerApplication.java
+│   │               │
+│   │               ├───controller
+│   │               │       CustomerController.java
+│   │               │       RewardController.java
+│   │               │       TransactionController.java
+│   │               │
+│   │               ├───dto
+│   │               │       CustomerDto.java
+│   │               │       TransactionDto.java
+│   │               │
+│   │               ├───entity
+│   │               │       Customer.java
+│   │               │       Transaction.java
+│   │               │
+│   │               ├───exception
+│   │               │       CustomerNotFoundException.java
+│   │               │       GlobalExceptionHandler.java
+│   │               │       NoTransactionsFoundException.java
+│   │               │       NoTransactionsFoundForCustomerException.java
+│   │               │
+│   │               ├───repository
+│   │               │       CustomerRepository.java
+│   │               │       TransactionRepository.java
+│   │               │
+│   │               ├───service
+│   │               │   │   CustomerService.java
+│   │               │   │   RewardService.java
+│   │               │   │   TransactionService.java
+│   │               │   │
+│   │               │   └───impl
+│   │               │           CustomerServiceImpl.java
+│   │               │           RewardServiceImpl.java
+│   │               │           TransactionServiceImpl.java
+│   │               │
+│   │               └───variables
+│   │                       Constants.java
+│   │
+│   └───resources
+│       │   application.properties
+│       │   data.sql
+│       │
+│       ├───static
+│       └───templates
+└───test
+    └───java
+        └───com
+            └───infosys
+                └───retailer
+                    │   RetailerApplicationTests.java
+                    │
+                    ├───Controller
+                    │       RewardControllerTest.java
+                    │
+                    └───service
+                            RewardServiceImplTest.java
 ```
 
 ## API Endpoints
