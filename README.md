@@ -15,10 +15,6 @@ This Retailer application calculates reward points for customers based on their 
 - [List of Software Used](#software-used)
 - [Project Structure](#project-structure)
 - [API Endpoints](#api-endpoints)
-  - [Get Rewards for transactions of three months](#get-Rewards-for-transactions-of-three-months) 
-  - [Get Customer Rewards](#get-customer-rewards)
-  - [Create Customer](#create-customer)
-  - [Create Transaction](#create-transaction)
 - [Accessing H2 Console](#accessing-h2-console)
 - [Flow Diagram](#flow-diagram)
 
