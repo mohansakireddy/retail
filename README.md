@@ -12,7 +12,7 @@ This Retailer application calculates reward points for customers based on their 
 
 - [Features](#features)
 - [API Endpoints](#api-endpoints)
-- [Accessing H2 Console](#accessing-mysql-database)
+- [Accessing MySQL Database](#accessing-mysql-database)
 - [Project Structure](#project-structure)
 - [Installation Guides](#installation-guide)
 - [Flow Diagram](images/flowdiagram.png)
@@ -141,10 +141,10 @@ This Retailer application calculates reward points for customers based on their 
 }
 ```
 ## Accessing MySQL Database
-- **H2 Console url:** `You can access the MySQL database using prefferred MySQL clinet (eg: MySQL Workbench) `
+- **MySQL Console URL:** `You can access the MySQL database using prefferred MySQL clinet (eg: MySQL Workbench) `
 - **JDBC URL:** `jdbc:mysql://localhost:3306/retailer`
-- **username:** `your username example(root)`
-- **password:** `you password example(root)`
+- **username:** `your username ` example: root
+- **password:** `you password ` example: root
 
 
 ## Project Structure
