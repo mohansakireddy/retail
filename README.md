@@ -23,7 +23,7 @@ This Retailer application calculates reward points for customers based on their 
 ## Features
 - Calculates rewards points for transactions of last three months for each and every customer.
 - provides REST endpoints to fetch rewards.
-- Uses H2 in-memory database for test data, initialized via data.sql.
+- Uses MySQL as database for storing data, initialized via data.sql.
 
 
 ## API Endpoints
