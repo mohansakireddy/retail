@@ -12,11 +12,11 @@ This Retailer application calculates reward points for customers based on their 
 
 - [Features](#features)
 - [API Endpoints](#api-endpoints)
-- [Accessing H2 Console](#accessing-h2-console)
+- [Accessing H2 Console](#accessing-mysql-database)
 - [Project Structure](#project-structure)
 - [Installation Guides](#installation-guide)
 - [Flow Diagram](images/flowdiagram.png)
-- [List of Software Used](#software-used)
+- [List of Softwares Used](#software-used)
 - [API Testing Screenshots](testingdocs/getRewardsForRecentTransactions.png)
 
 
@@ -140,11 +140,11 @@ This Retailer application calculates reward points for customers based on their 
     "amount": 555.0
 }
 ```
-## Accessing H2 console
-- **H2 Console url:** `(http://localhost:8080/h2-console)`
-- **JDBC URL:** `jdbc:h2:mem:testdb`
-- **username:** `sa`
-- **password:** (leave blank)
+## Accessing MySQL Database
+- **H2 Console url:** `You can access the MySQL database using prefferred MySQL clinet (eg: MySQL Workbench) `
+- **JDBC URL:** `jdbc:mysql://localhost:3306/retailer`
+- **username:** `your username example(root)`
+- **password:** `you password example(root)`
 
 
 ## Project Structure
@@ -240,13 +240,13 @@ mvn clean install
 mvn spring-boot:run
 ```
 
-### 5.Access H2 console
+### 5.Access MySQL Database
+ You can access the MySQL database using prefferred MySQL clinet (eg: MySQL Workbench)
 
-'http://localhost:8080/h2-console'
 
 
 ## Software Used
 - **JAVA** 
 - **Spring Boot**
-- **H2 Database:** In-Memory database for Testing 
+- **MySQL:** Relational database management system 
 - **Maven:** Build Automation Tool
