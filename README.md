@@ -141,7 +141,7 @@ This Retailer application calculates reward points for customers based on their 
 }
 ```
 ## Accessing H2 console
-- **H2 Console url:** `[POST](http://localhost:8080/h2-console)`
+- **H2 Console url:** `(http://localhost:8080/h2-console)`
 - **JDBC URL:** `jdbc:h2:mem:testdb`
 - **username:** `sa`
 - **password:** (leave blank)
